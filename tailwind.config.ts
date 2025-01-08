@@ -18,9 +18,17 @@ export default {
             colors: {
                 background: 'var(--background)',
                 foreground: 'var(--foreground)',
-                darkGrey: '#443349',
+                darkGrey: '#44334A',
                 lightPurple: '#8D77A8',
                 lightBg: '#C4ADDD',
+                // pink: '#ba319f',
+            },
+            fontFamily: {
+                playwrite: ['Playwrite IS', 'serif'],
+                bonheur: ['Bonheur Royale', 'serif'],
+                alex_brush: ['Alex Brush', 'serif'],
+                roboto: ['Roboto', 'serif'],
+                open_sans: ['Open Sans', 'serif'],
             },
         },
     },

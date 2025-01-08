@@ -1,7 +1,11 @@
 import React from 'react'
 
 const Contact = () => {
-    return <div>Contact Contact</div>
+    return (
+        <div id="contact" className="min-h-[50vh]">
+            Contact Contact
+        </div>
+    )
 }
 
 export default Contact

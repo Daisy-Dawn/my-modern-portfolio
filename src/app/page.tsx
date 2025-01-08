@@ -5,12 +5,13 @@ import Services from '@/components/pages/Services'
 import Skills from '@/components/pages/Skills'
 import Portfolio from '@/components/pages/Portfolio'
 import Contact from '@/components/pages/Contact'
-// import Hero from '@/components/pages/Hero'
+import Experience from '@/components/pages/Experience'
 export default function Home() {
     return (
-        <div>
+        <div className="font-open_sans">
             <Header />
             <About />
+            <Experience />
             <Services />
             <Skills />
             <Portfolio />

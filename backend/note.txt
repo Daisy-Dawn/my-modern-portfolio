@@ -1,0 +1,2 @@
+go to google app passwords and register the app to have access to it.
+then the 16 digit password given to u, will be added in ur .env password field

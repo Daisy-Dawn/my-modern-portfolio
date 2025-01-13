@@ -81,11 +81,13 @@ const Header = () => {
                         {link.title}
                     </button>
                 ))}
-                <button
+                <a
+                    href="/doc/my_resume.pdf" // Path to the CV file in the public folder
+                    download // Allows the file to be downloaded
                     className={`px-[20px] capitalize text-center py-[8px] bg-darkGrey hover:bg-background transition-all duration-100 hover:border-[1px] hover:border-darkGrey text-white hover:text-foreground`}
                 >
                     Download CV
-                </button>
+                </a>
             </div>
 
             {/* RESPONSIVENESS */}

@@ -50,9 +50,9 @@ const Header = () => {
         { title: 'contact us', key: 'contact' },
     ]
     return (
-        <div className="flex font-open_sans sticky shadow-md top-0 w-full z-[20] bg-background justify-between px-3 lg:px-[3rem]  items-center h-[70px] ">
+        <div className="flex font-open_sans text-lemonGreen sticky shadow-md top-0 w-full z-[20] bg-background justify-between px-3 lg:px-[3rem]  items-center h-[70px] ">
             {/* logo  lg:px-0 lg:justify-around */}
-            <div className=" flex items-center gap-2">
+            <div className=" flex items-center gap-1">
                 {/* border-[2px]  border-lightBg  */}
                 <div className="w-[40px] h-[40px] flex justify-center items-center bg-darkGrey rounded-full">
                     <Image
@@ -82,7 +82,6 @@ const Header = () => {
                     </button>
                 ))}
                 <button
-                    // onClick={() => scrollToSection(link.key)}
                     className={`px-[20px] capitalize text-center py-[8px] bg-darkGrey hover:bg-background transition-all duration-100 hover:border-[1px] hover:border-darkGrey text-white hover:text-foreground`}
                 >
                     Download CV
@@ -126,7 +125,7 @@ const Header = () => {
                         : toggle && componentMount
                         ? 'slide-in-left'
                         : 'slide-out-left'
-                } items-start justify-start glass-background  bg-foreground  absolute top-[70px] py-[30px] left-0  z-10 w-[65%] md:w-[45%] h-dvh nav shadow-lg transition-all duration-300 gap-4 lg:hidden`}
+                } items-start justify-start glass-background opacity-50 bg-background  absolute top-[70px] py-[30px] left-0  z-10 w-[65%] md:w-[45%] h-dvh nav shadow-lg transition-all duration-300 gap-4 lg:hidden`}
             >
                 {navLinks.map((link) => (
                     <button
@@ -140,9 +139,7 @@ const Header = () => {
                     </button>
                 ))}
                 <button
-                    // bg-darkGrey text-white
-                    // onClick={() => scrollToSection(link.key)}
-                    className={`px-[20px] capitalize text-center py-[8px]  bg-background text-foreground `}
+                    className={`px-[20px] capitalize text-center py-[8px]  bg-darkGrey text-foreground `}
                 >
                     Download CV
                 </button>

@@ -5,10 +5,10 @@ const Services = () => {
     return (
         <div
             id="services"
-            className="min-h-[70vh] px-[5rem] flex text-white justify-center items-center"
+            className="min-h-[90vh]  xl:px-[5rem] md:px-[2rem] px-[1rem] py-[5rem] md:py-[3rem] lg:py-0  flex text-white justify-center items-center"
         >
             <div className="flex flex-col w-full gap-[2rem]">
-                <h2 className="text-[32px] text-center font-playwrite text-foreground font-semibold">
+                <h2 className="text-[32px] text-center text-lemonGreen font-playwrite text-foreground font-semibold">
                     My Services
                 </h2>
 
@@ -18,9 +18,9 @@ const Services = () => {
                     applications out there!
                 </p>
 
-                <div className="grid grid-cols-3 gap-y-[2rem] gap-x-[4rem]">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-[2rem] gap-x-[2rem] xl:gap-x-[4rem]">
                     {/* frontend */}
-                    <div className="py-4 px-4 bg-darkGrey  flex justify-start items-center gap-4">
+                    <div className="py-4 md:px-4 px-2  border-[2px] border-lightGrey bg-transparent  flex justify-start items-center md:gap-4 gap-2">
                         {/* icon */}
                         <span className="rounded-full w-10 h-10 flex justify-center items-center bg-lightBg">
                             <Image
@@ -37,7 +37,7 @@ const Services = () => {
                     </div>
 
                     {/* backend */}
-                    <div className="py-4 px-4 bg-darkGrey flex justify-start items-center gap-4">
+                    <div className="py-4 md:px-4 px-2  border-[2px] border-lightGrey bg-transparent  flex justify-start items-center md:gap-4 gap-2">
                         {/* icon */}
                         <span className="rounded-full w-10 h-10 flex justify-center items-center bg-lightBg">
                             <Image
@@ -54,7 +54,7 @@ const Services = () => {
                     </div>
 
                     {/* fullstack */}
-                    <div className="py-4 px-4 bg-darkGrey flex justify-start items-center gap-4">
+                    <div className="py-4 md:px-4 px-2  border-[2px] border-lightGrey bg-transparent  flex justify-start items-center md:gap-4 gap-2">
                         {/* icon */}
                         <span className="rounded-full w-10 h-10 flex justify-center items-center bg-lightBg">
                             <Image
@@ -71,7 +71,7 @@ const Services = () => {
                     </div>
 
                     {/* dbms */}
-                    <div className="py-4 px-4 bg-darkGrey flex justify-start items-center gap-4">
+                    <div className="py-4 md:px-4 px-2  border-[2px] border-lightGrey bg-transparent  flex justify-start items-center md:gap-4 gap-2">
                         {/* icon */}
                         <span className="rounded-full w-10 h-10 flex justify-center items-center bg-lightBg">
                             <Image
@@ -88,7 +88,7 @@ const Services = () => {
                     </div>
 
                     {/* graphics design */}
-                    <div className="py-4 px-4 bg-darkGrey flex justify-start items-center gap-4">
+                    <div className="py-4 md:px-4 px-2  border-[2px] border-lightGrey bg-transparent  flex justify-start items-center md:gap-4 gap-2">
                         {/* icon */}
                         <span className="rounded-full w-10 h-10 flex justify-center items-center bg-lightBg">
                             <Image

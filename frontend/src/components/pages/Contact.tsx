@@ -1,10 +1,10 @@
 'use client'
 import { Alert, CircularProgress } from '@mui/material'
+import axios from 'axios'
 import React, { useState } from 'react'
-import { FiMail } from 'react-icons/fi'
 import { ImLocation } from 'react-icons/im'
 import { IoIosMail } from 'react-icons/io'
-import { MdLocalPhone, MdPhoneInTalk } from 'react-icons/md'
+import { MdPhoneInTalk } from 'react-icons/md'
 
 interface ContactFormData {
     name: string
@@ -78,30 +78,60 @@ const Contact = () => {
         if (validateInputs()) {
             try {
                 setLoading(true)
-                // All fields are filled, proceed with form submission
-                console.log('Form submitted:', formData)
+                const response = await axios.post(
+                    'https://my-modern-portfolio-ddm1.onrender.com/send-email',
+                    formData,
+                    {
+                        headers: { 'Content-Type': 'application/json' },
+                    }
+                )
 
-                // send the email to the client
+                console.log('Contact Form response data:', response.data)
+
+                setAlert({
+                    type: 'success',
+                    message: 'Message sent successfully!',
+                })
 
                 setLoading(false)
-            } catch (error: any) {
-                console.error(
-                    'Error during login:',
-                    error.response?.data || error.message
-                )
-                setAlert({
-                    type: 'error',
-                    message:
-                        error.response?.data?.message ||
-                        'An error occurred during login.',
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    subject: '',
+                    message: '',
                 })
+            } catch (error) {
+                let errorMessage = 'Error during sending form'
+                if (axios.isAxiosError(error)) {
+                    // AxiosError has response.data
+                    errorMessage =
+                        errorMessage + ': ' + error.response?.data?.message ||
+                        errorMessage
+                    setAlert({
+                        type: 'error',
+                        message: errorMessage,
+                    })
+                } else if (typeof error === 'string') {
+                    errorMessage = error // Handle string errors
+                    setAlert({
+                        type: 'error',
+                        message: errorMessage,
+                    })
+                } else if (error instanceof Error) {
+                    errorMessage = error.message // Fallback for non-Axios errors
+                    setAlert({
+                        type: 'error',
+                        message: errorMessage,
+                    })
+                }
+                console.error('Error response:', errorMessage)
+                console.error('Error fetching order progress:', error)
+
                 setLoading(false)
             }
         } else {
-            setAlert({
-                type: 'error',
-                message: 'Please fill in all required fields.',
-            })
+            setAlert({ type: 'error', message: 'Please fill in all fields.' })
         }
     }
 
@@ -125,16 +155,16 @@ const Contact = () => {
     return (
         <div
             id="contact"
-            className="min-h-screen relative flex items-center bg-foreground text-white px-[5rem] py-[3rem]"
+            className="min-h-screen relative flex items-center text-white  lg:px-[5rem] md:px-[2rem] px-[1rem] py-[3rem]"
         >
-            <div className="grid grid-cols-2 gap-[4rem]">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-[4rem]">
                 {/* contact me */}
                 <div className="flex flex-col gap-[4rem]">
                     <div className="flex flex-col gap-[1.5rem]">
-                        <h2 className="font-playwrite text-[32px]">
+                        <h2 className="font-playwrite text-lemonGreen text-[32px]">
                             Contact Me
                         </h2>
-                        <h1>
+                        <h1 className="text-">
                             Have a project or idea? Let’s connect! Whether it’s
                             developing a full-stack web application or sleek
                             designs, I’m here to bring your vision to life.
@@ -146,19 +176,19 @@ const Contact = () => {
                         </h1>
                     </div>
 
-                    <div className="flex flex-col gap-[2rem]">
+                    <div className="flex flex-col gap-[1rem] md:gap-[2rem]">
                         {/* contact */}
                         {contactIconList.map((contact, index) => (
                             <div
                                 key={index}
                                 className="flex gap-6 items-center"
                             >
-                                <span className="bg-white flex justify-center items-center rounded-full text-foreground w-10 h-10">
+                                <span className="bg-darkGreen flex justify-center items-center rounded-full text-foreground w-10 h-10">
                                     {contact.icon}
                                 </span>
 
                                 <div>
-                                    <h5 className="text-lightPurple">
+                                    <h5 className="text-lightGrey">
                                         {' '}
                                         {contact.header}{' '}
                                     </h5>
@@ -178,10 +208,10 @@ const Contact = () => {
                         className="grid grid-cols-2 gap-[2rem]"
                     >
                         {/* name */}
-                        <div>
+                        <div className="col-span-2 lg:col-span-1">
                             <input
                                 type="text"
-                                className="rounded-md px-[15px] py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
+                                className="rounded-md  px-[15px] py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
                                 placeholder="Name"
                                 name="name"
                                 onChange={handleChange}
@@ -195,7 +225,7 @@ const Contact = () => {
                         </div>
 
                         {/* email */}
-                        <div>
+                        <div className="col-span-2 lg:col-span-1">
                             <input
                                 type="email"
                                 className="rounded-md px-[15px] py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
@@ -214,7 +244,7 @@ const Contact = () => {
                         {/* phone */}
                         <input
                             type="tel"
-                            className="rounded-md px-[15px] py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
+                            className="rounded-md px-[15px] col-span-2 lg:col-span-1 py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
                             placeholder="Phone#"
                             name="phone"
                             onChange={handleChange}
@@ -224,7 +254,7 @@ const Contact = () => {
                         {/* subject */}
                         <input
                             type="text"
-                            className="rounded-md px-[15px] py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
+                            className="rounded-md px-[15px] col-span-2 lg:col-span-1 py-[15px] bg-transparent w-full border-[1px] border-lightBg outline-none"
                             placeholder="Subject"
                             name="subject"
                             onChange={handleChange}
@@ -249,7 +279,7 @@ const Contact = () => {
                         </div>
 
                         <button
-                            className={`rounded-md py-[15px] px-2 flex items-center justify-center  gap-2 w-[80%]   login-button-glass-background bg-opacity-30 z-50 shadow-lg ${
+                            className={`rounded-md py-[15px] px-2 flex items-center justify-center  gap-2 lg:w-[80%] w-full   login-button-glass-background bg-opacity-30 z-50 shadow-lg ${
                                 isValidated
                                     ? 'bg-[#9d377ebb]'
                                     : 'bg-[#55535523]'

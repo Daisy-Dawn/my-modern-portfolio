@@ -4,16 +4,18 @@
 @tailwind utilities;
 
 /* :root {
-    --background: #100725;
-    --foreground: #ba319f;
-} */
-/* :root {
-    --background: #e8d8f2;
-    --foreground: #2e0f47;
-} */
-:root {
     --background: #d1c0ec;
     --foreground: #1b0e20;
+} */
+/* #45 */
+/* :root {
+    --background: #2d283e;
+    --foreground: #d1d7e0;
+} */
+/* #27 */
+:root {
+    --background: #222629;
+    --foreground: #fff;
 }
 
 * {
@@ -89,7 +91,7 @@ body {
     }
 }
 
-/* .glass-background {
-    filter: drop-shadow(0px 39.874px 39.874px rgba(68, 51, 73, 0.842));
+.glass-background {
+    filter: drop-shadow(0px 39.874px 39.874px #222629);
     backdrop-filter: blur(22px);
-} */
+}

@@ -27,10 +27,10 @@ const Skills = () => {
     return (
         <div
             id="skills"
-            className="min-h-[50vh] px-[5rem] py-[3rem] flex justify-center items-center"
+            className="min-h-[50vh] lg:px-[5rem] md:px-[2rem] px-[1rem] py-[3rem] flex justify-center items-center"
         >
             <div className="flex flex-col gap-6">
-                <h2 className="text-[32px] text-center font-playwrite text-foreground font-semibold">
+                <h2 className="text-[32px] text-lemonGreen text-center font-playwrite text-foreground font-semibold">
                     My Skills
                 </h2>
                 <p className=" text-[18px] text-center">
@@ -41,7 +41,7 @@ const Skills = () => {
                 </p>
 
                 {/* skills display */}
-                <div className="w-full grid py-[2rem] grid-cols-8 gap-5">
+                <div className="w-full grid py-[2rem] lg:grid-cols-6 xl:grid-cols-8 md:grid-cols-5 sm:grid-cols-3 grid-cols-3 gap-5">
                     {skills.map((skill, index) => (
                         <div
                             key={index}

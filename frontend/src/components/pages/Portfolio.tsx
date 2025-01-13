@@ -78,35 +78,30 @@ const Portfolio = () => {
     return (
         <div
             id="portfolio"
-            className="min-h-[50vh] px-[5rem] py-[3rem] flex flex-col gap-[2.5rem]"
+            className="min-h-[50vh] xl:px-[5rem] md:px-[2rem] px-[1rem] py-[5rem] flex flex-col gap-[2.5rem]"
         >
-            <div className="grid grid-cols-2  items-center">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-[1rem] md:gap-0  items-center">
                 {/* header text */}
-                <div className="flex flex-col w-[70%] gap-5">
-                    <h3 className="font-playwrite font-semibold text-[32px]">
+                <div className="flex flex-col xl:w-[70%] w-[80%] gap-5">
+                    <h3 className="font-playwrite text-lemonGreen font-semibold text-[32px]">
                         Portfolio
                     </h3>
                     <p className="text-justify">
                         Displaying a collection of some of my best work. Each
                         project reflects my commitment to quality, innovation,
                         and delivering impactful digital solutions.
-                        {/* Displaying a collection of some of my best work,
-                        showcasing my expertise in crafting functional,
-                        scalable, and visually engaging web applications. Each
-                        project reflects my commitment to quality, innovation,
-                        and delivering impactful digital solutions. */}
                     </p>
                 </div>
 
                 {/* buttons */}
-                <div className=" w-full flex justify-end">
-                    <div className="flex w-[80%]  text-white items-center">
+                <div className=" w-full  flex justify-end">
+                    <div className="lg:flex grid grid-cols-2  xl:w-[80%] w-full gap-[3px] text-white items-center">
                         <button
                             className={`py-[15px] w-full ${
                                 selectedFilter === 'all'
-                                    ? 'bg-darkGrey'
-                                    : 'bg-foreground'
-                            } flex justify-center items-center border-r-[3px] border-r-white hover:bg-darkGrey hover:text-white hover:transition-all hover:duration-100`}
+                                    ? 'bg-darkGreen'
+                                    : 'bg-darkGrey'
+                            } flex justify-center items-center hover:bg-transparent hover:border-[1px] hover:border-lightGrey hover:text-white hover:transition-all hover:duration-100`}
                             onClick={() => setSelectedFilter('all')}
                         >
                             All Works
@@ -114,19 +109,19 @@ const Portfolio = () => {
                         <button
                             className={`py-[15px] w-full ${
                                 selectedFilter === 'personalWorks'
-                                    ? 'bg-darkGrey'
-                                    : 'bg-foreground'
-                            } flex justify-center items-center border-r-[3px] border-r-white hover:bg-darkGrey hover:text-white hover:transition-all hover:duration-100`}
+                                    ? 'bg-darkGreen'
+                                    : 'bg-darkGrey'
+                            } flex justify-center items-center  hover:bg-transparent hover:border-[1px] hover:border-lightGrey hover:text-white hover:transition-all hover:duration-100`}
                             onClick={() => setSelectedFilter('personalWorks')}
                         >
                             Personal Projects
                         </button>
                         <button
-                            className={`py-[15px] w-full ${
+                            className={`py-[15px] col-span-2 w-full ${
                                 selectedFilter === 'professionalWorks'
-                                    ? 'bg-darkGrey'
-                                    : 'bg-foreground'
-                            } flex justify-center items-center hover:bg-darkGrey hover:text-white hover:transition-all hover:duration-100`}
+                                    ? 'bg-darkGreen'
+                                    : 'bg-darkGrey'
+                            } flex justify-center items-center hover:bg-transparent hover:border-[1px] hover:border-lightGrey hover:text-white hover:transition-all hover:duration-100`}
                             onClick={() =>
                                 setSelectedFilter('professionalWorks')
                             }
@@ -138,11 +133,11 @@ const Portfolio = () => {
             </div>
 
             {/* works */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                 {displayedPortfolio.map((item, index) => (
                     <div
                         key={index}
-                        className="rounded-2xl overflow-hidden w-full h-[450px]"
+                        className="rounded-2xl overflow-hidden w-full h-[250px] md:h-[350px] lg:h-[450px]"
                     >
                         <a
                             href={item.link}
@@ -155,7 +150,7 @@ const Portfolio = () => {
                                 alt={item.name}
                                 width={0}
                                 height={0}
-                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                                sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 33vw"
                             />
                         </a>
                     </div>
@@ -165,7 +160,7 @@ const Portfolio = () => {
             {/* view all button */}
             <div className="flex w-full justify-center items-center">
                 <button
-                    className={`py-[15px] w-[150px] rounded-md flex justify-center gap-2 text-white items-center bg-foreground hover:bg-darkGrey hover:transition-all hover:duration-100`}
+                    className={`py-[15px] w-[150px] rounded-md flex justify-center gap-2 text-white items-center bg-darkGreen hover:bg-darkGrey hover:transition-all hover:duration-100`}
                     onClick={() => setShowAll((prev) => !prev)}
                 >
                     <p>{showAll ? 'View Less' : 'View More'}</p>

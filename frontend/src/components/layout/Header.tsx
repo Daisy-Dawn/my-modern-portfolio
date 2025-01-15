@@ -132,7 +132,10 @@ const Header = () => {
                 {navLinks.map((link) => (
                     <button
                         key={link.key}
-                        onClick={() => scrollToSection(link.key)}
+                        onClick={() => {
+                            scrollToSection(link.key)
+                            handleToggle() // Ensure toggle happens here as well
+                        }}
                         className={`px-[20px] capitalize text-lightBg text-center py-[8px] ${
                             activeSection === link.key ? 'bg-darkGrey' : ''
                         }`}
@@ -140,11 +143,14 @@ const Header = () => {
                         {link.title}
                     </button>
                 ))}
-                <button
+                <a
+                    onClick={handleToggle}
+                    href="/doc/my_resume.pdf" // Path to the CV file in the public folder
+                    download // Allows the file to be downloaded
                     className={`px-[20px] capitalize text-center py-[8px]  bg-darkGrey text-foreground `}
                 >
                     Download CV
-                </button>
+                </a>
             </div>
         </div>
     )

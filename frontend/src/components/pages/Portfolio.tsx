@@ -10,7 +10,7 @@ const Portfolio = () => {
     const portfolio = [
         {
             image: '/images/portfolio/ukraft.png',
-            link: 'https://ukraft-store.vercel.app/',
+            link: 'https://www.ukraftstore.com/',
             name: 'Ukraft Store',
             tag: 'professionalWorks',
         },

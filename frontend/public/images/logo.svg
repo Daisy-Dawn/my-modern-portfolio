@@ -1,0 +1,52 @@
+<svg width="400" height="400" viewBox="160 60 360 400" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>Daisy Dawn Concepts logomark</title>
+  <desc>A daisy flower with the sun as its golden center and a green stem</desc>
+
+  <!-- Stem -->
+  <path d="M340,258 Q336,310 338,420" fill="none" stroke="#3A6E28" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- Leaf right -->
+  <path d="M339,318 Q372,295 388,308 Q370,332 339,330 Z" fill="#4A8A32"/>
+  <path d="M339,318 Q368,308 388,308" fill="none" stroke="#3A6E28" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Leaf left -->
+  <path d="M339,368 Q306,348 292,360 Q308,382 339,378 Z" fill="#4A8A32"/>
+  <path d="M339,368 Q310,360 292,360" fill="none" stroke="#3A6E28" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Back petals (180°–337.5°) -->
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#E8E0D0" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(180 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#EAE2D2" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(202.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#ECE4D5" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(225 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#EEE6D8" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(247.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#EFE8DA" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(270 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#EEE6D8" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(292.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#ECE4D5" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(315 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#EAE2D2" stroke="#CFC4A8" stroke-width="0.6" transform="rotate(337.5 340 215)"/>
+
+  <!-- Front petals (0°–157.5°) -->
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFFFF" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(0 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FEFEFE" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(22.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFEFC" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(45 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFEFB" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(67.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFEFA" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(90 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFEFB" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(112.5 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FFFEFC" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(135 340 215)"/>
+  <ellipse cx="340" cy="150" rx="11" ry="38" fill="#FEFEFE" stroke="#DDD5BB" stroke-width="0.6" transform="rotate(157.5 340 215)"/>
+
+  <!-- Warm glow from sun -->
+  <circle cx="340" cy="215" r="68" fill="#FFC840" opacity="0.1"/>
+  <circle cx="340" cy="215" r="52" fill="#FFB800" opacity="0.1"/>
+
+  <!-- Sun center -->
+  <circle cx="341" cy="218" r="47" fill="#C87800" opacity="0.18"/>
+  <circle cx="340" cy="215" r="45" fill="#E89000"/>
+  <circle cx="340" cy="215" r="40" fill="#F5A800"/>
+  <circle cx="340" cy="215" r="34" fill="#FFBB00"/>
+
+  <!-- Sun highlight -->
+  <circle cx="328" cy="204" r="14" fill="#FFE055" opacity="0.55"/>
+  <circle cx="322" cy="199" r="6" fill="#FFF4AA" opacity="0.5"/>
+
+  <!-- Sun depth shadow -->
+  <circle cx="352" cy="226" r="12" fill="#C07000" opacity="0.2"/>
+</svg>

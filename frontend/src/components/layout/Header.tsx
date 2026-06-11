@@ -1,6 +1,6 @@
 "use client";
 import "../../app/globals.css";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { RiCloseLargeLine } from "react-icons/ri";
 

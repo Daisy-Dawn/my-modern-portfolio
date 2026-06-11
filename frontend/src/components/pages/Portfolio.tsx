@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import { FaCaretDown, FaCaretUp } from "react-icons/fa";
+import React from "react";
+// import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 const Portfolio = () => {
   // const [selectedFilter, setSelectedFilter] = useState("all");
-  const [showAll, setShowAll] = useState(false);
+  // const [showAll, setShowAll] = useState(false);
 
   const portfolio = [
     {

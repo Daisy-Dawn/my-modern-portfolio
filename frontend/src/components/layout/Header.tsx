@@ -50,10 +50,9 @@ const Header = () => {
     { title: "contact us", key: "contact" },
   ];
   return (
-    <div className="flex font-open_sans text-lemonGreen sticky shadow-md top-0 w-full z-[20] bg-background justify-between px-3 lg:px-[3rem]  items-center h-[70px] ">
+    <div className="flex font-open_sans text-lemonGreen sticky shadow-md top-0 w-full z-[20] bg-background justify-end px-3 lg:px-[3rem]  items-center h-[70px] ">
       {/* logo  lg:px-0 lg:justify-around */}
-      <div className=" flex items-center gap-0">
-        {/* border-[2px]  border-lightBg  */}
+      {/* <div className=" flex items-center gap-0">
 
         <Image
           //   className="w-[40px] h-[40px] "
@@ -65,7 +64,7 @@ const Header = () => {
         <h2 className="text-primary font-playwrite text-[13px] font-medium">
           Daisy Dawn Concepts
         </h2>
-      </div>
+      </div> */}
 
       {/* links */}
       <div className="rounded-md hidden lg:flex p-[2px] gap-2 ">

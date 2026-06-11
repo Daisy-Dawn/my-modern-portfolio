@@ -9,7 +9,7 @@ const Experience = () => {
       <div className="h-[80%] w-[200px] relative  bg-darkGreen rounded-tr-[20px]  py-[20px] flex justify-center items-center ">
         <div>
           <h3 className="text-white text-center font-roboto leading-none font-semibold text-[45px]">
-            30+
+            20+
           </h3>
           <p className="text-[20px] font-medium">Clients</p>
         </div>

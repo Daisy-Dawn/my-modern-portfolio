@@ -11,13 +11,14 @@ const Skills = () => {
     { image: "/images/skills/javascript.svg", text: "Javascript" },
     { image: "/images/skills/figma.svg", text: "Figma" },
     { image: "/images/skills/rtk.svg", text: "Redux Tool Kit" },
-    { image: "/images/skills/python.png", text: "Python" },
-    { image: "/images/skills/nodejs2.svg", text: "Node Js" },
-    { image: "/images/skills/express.svg", text: "Express Js" },
+    { image: "/images/skills/zustand.png", text: "Zustand" },
+    // { image: "/images/skills/python.png", text: "Python" },
+    // { image: "/images/skills/nodejs2.svg", text: "Node Js" },
+    // { image: "/images/skills/express.svg", text: "Express Js" },
     { image: "/images/skills/firebase.png", text: "Firebase" },
     { image: "/images/skills/jest.svg", text: "Jest" },
-    { image: "/images/skills/mongodb2.svg", text: "Mongo DB" },
-    { image: "/images/skills/mongoose1.png", text: "Mongoose" },
+    // { image: "/images/skills/mongodb2.svg", text: "Mongo DB" },
+    // { image: "/images/skills/mongoose1.png", text: "Mongoose" },
     { image: "/images/skills/git.svg", text: "Git and Version Control" },
     // { image: "/images/skills/excel.svg", text: "Microsoft Excel" },
     // { image: "/images/skills/msword.png", text: "Microsoft Word" },
@@ -42,7 +43,7 @@ const Skills = () => {
         </p>
 
         {/* skills display */}
-        <div className="w-full grid py-[2rem] lg:grid-cols-6 xl:grid-cols-8 md:grid-cols-5 sm:grid-cols-3 grid-cols-3 gap-5">
+        <div className="w-full grid py-[2rem]  md:grid-cols-5 sm:grid-cols-3 grid-cols-3 gap-5">
           {skills.map((skill, index) => (
             <div
               key={index}

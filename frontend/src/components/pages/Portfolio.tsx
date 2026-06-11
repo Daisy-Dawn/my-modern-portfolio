@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 
 const Portfolio = () => {
-  const [selectedFilter, setSelectedFilter] = useState("all");
+  // const [selectedFilter, setSelectedFilter] = useState("all");
   const [showAll, setShowAll] = useState(false);
 
   const portfolio = [
@@ -58,14 +58,14 @@ const Portfolio = () => {
     },
   ];
 
-  const filteredPortfolio =
-    selectedFilter === "all"
-      ? portfolio
-      : portfolio.filter((item) => item.tag === selectedFilter);
+  // const filteredPortfolio =
+  //   selectedFilter === "all"
+  //     ? portfolio
+  //     : portfolio.filter((item) => item.tag === selectedFilter);
 
-  const displayedPortfolio = showAll
-    ? filteredPortfolio
-    : filteredPortfolio.slice(0, 3);
+  // const displayedPortfolio = showAll
+  //   ? filteredPortfolio
+  //   : filteredPortfolio.slice(0, 3);
 
   return (
     <div
@@ -91,7 +91,7 @@ const Portfolio = () => {
 
       {/* GRID */}
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
-        {displayedPortfolio.map((item, index) => (
+        {portfolio.map((item, index) => (
           <div
             key={index}
             className="rounded-2xl overflow-hidden bg-darkGrey/10 flex flex-col relative"
@@ -152,7 +152,7 @@ const Portfolio = () => {
       </div>
 
       {/* VIEW MORE */}
-      <div className="flex w-full justify-center items-center">
+      {/* <div className="flex w-full justify-center items-center">
         <button
           className="py-[15px] w-[150px] rounded-md flex justify-center gap-2 text-white items-center bg-darkGreen hover:bg-darkGrey transition-all"
           onClick={() => setShowAll((prev) => !prev)}
@@ -160,7 +160,7 @@ const Portfolio = () => {
           <p>{showAll ? "View Less" : "View More"}</p>
           <span>{showAll ? <FaCaretUp /> : <FaCaretDown />}</span>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

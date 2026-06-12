@@ -80,7 +80,7 @@ const Header = () => {
           </button>
         ))}
         <a
-          href="/doc/AGBO EMMANUELLA A - Resume.pdf"
+          href="/doc/Emmanuella_Agbo_Frontend_Engineer.pdf"
           download
           className={`px-[20px] capitalize text-center py-[8px] bg-darkGrey hover:bg-background transition-colors duration-300 hover:border-[1px] hover:border-darkGrey text-white hover:text-foreground`}
         >

@@ -140,8 +140,8 @@ const Header = () => {
         ))}
         <a
           onClick={handleToggle}
-          href="/doc/my_resume.pdf" // Path to the CV file in the public folder
-          download // Allows the file to be downloaded
+          href="/doc/Emmanuella_Agbo_Frontend_Engineer.pdf"
+          download
           className={`px-[20px] capitalize text-center py-[8px]  bg-darkGrey text-foreground `}
         >
           Download CV
